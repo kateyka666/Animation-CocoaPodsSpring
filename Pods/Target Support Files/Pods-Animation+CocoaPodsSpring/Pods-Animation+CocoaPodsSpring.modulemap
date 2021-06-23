@@ -1,0 +1,6 @@
+module Pods_Animation_CocoaPodsSpring {
+  umbrella header "Pods-Animation+CocoaPodsSpring-umbrella.h"
+
+  export *
+  module * { export * }
+}
