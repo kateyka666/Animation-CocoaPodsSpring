@@ -13,6 +13,8 @@
 		79237314268214BA000730AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79237312268214BA000730AE /* Main.storyboard */; };
 		79237316268214BE000730AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79237315268214BE000730AE /* Assets.xcassets */; };
 		79237319268214BE000730AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79237317268214BE000730AE /* LaunchScreen.storyboard */; };
+		798A32F32684D80A0054DD18 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A32F22684D80A0054DD18 /* AnimationModel.swift */; };
+		7998E4A926851C8C008D8AF3 /* AnimationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7998E4A826851C8C008D8AF3 /* AnimationDataManager.swift */; };
 		A5D0CF6B937ECD0FB0CC0E56 /* libPods-Animation+CocoaPodsSpring.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 899E5ACCF7F64F83AEAA9433 /* libPods-Animation+CocoaPodsSpring.a */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		79237315268214BE000730AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79237318268214BE000730AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7923731A268214BE000730AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		798A32F22684D80A0054DD18 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		7998E4A826851C8C008D8AF3 /* AnimationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDataManager.swift; sourceTree = "<group>"; };
 		899E5ACCF7F64F83AEAA9433 /* libPods-Animation+CocoaPodsSpring.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Animation+CocoaPodsSpring.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84CA647D5D9A1BF871E41B5 /* Pods-Animation+CocoaPodsSpring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation+CocoaPodsSpring.release.xcconfig"; path = "Target Support Files/Pods-Animation+CocoaPodsSpring/Pods-Animation+CocoaPodsSpring.release.xcconfig"; sourceTree = "<group>"; };
 		F182EA3030E4632D401672DE /* Pods-Animation+CocoaPodsSpring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation+CocoaPodsSpring.debug.xcconfig"; path = "Target Support Files/Pods-Animation+CocoaPodsSpring/Pods-Animation+CocoaPodsSpring.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		7923730B268214BA000730AE /* Animation+CocoaPodsSpring */ = {
 			isa = PBXGroup;
 			children = (
+				798A32F22684D80A0054DD18 /* AnimationModel.swift */,
+				7998E4A826851C8C008D8AF3 /* AnimationDataManager.swift */,
 				79237310268214BA000730AE /* ViewController.swift */,
 				79237312268214BA000730AE /* Main.storyboard */,
 				7923730C268214BA000730AE /* AppDelegate.swift */,
@@ -205,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7998E4A926851C8C008D8AF3 /* AnimationDataManager.swift in Sources */,
+				798A32F32684D80A0054DD18 /* AnimationModel.swift in Sources */,
 				79237311268214BA000730AE /* ViewController.swift in Sources */,
 				7923730D268214BA000730AE /* AppDelegate.swift in Sources */,
 				7923730F268214BA000730AE /* SceneDelegate.swift in Sources */,

@@ -133,7 +133,7 @@ public class Spring : NSObject {
         case Swing = "swing"
     }
     
-    public enum AnimationCurve: String {
+    public enum AnimationCurve: String, CaseIterable {
         case EaseIn = "easeIn"
         case EaseOut = "easeOut"
         case EaseInOut = "easeInOut"

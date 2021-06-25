@@ -15,71 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var animationView: SpringView!
     @IBOutlet weak var switchAnimationButton: SpringButton!
     
+    private var myAnimation = AnimationModel.getAnimatinModel()
+    
    private var index = 0
 
-   private let animations: [Spring.AnimationPreset] = [
-        .Shake,
-        .Pop,
-        .Morph,
-        .Squeeze,
-        .Wobble,
-        .Swing,
-        .FlipX,
-        .FlipY,
-        .Fall,
-        .SqueezeLeft,
-        .SqueezeRight,
-        .SqueezeDown,
-        .SqueezeUp,
-        .SlideLeft,
-        .SlideRight,
-        .SlideDown,
-        .SlideUp,
-        .FadeIn,
-        .FadeOut,
-        .FadeInLeft,
-        .FadeInRight,
-        .FadeInDown,
-        .FadeInUp,
-        .ZoomIn,
-        .ZoomOut,
-        .Flash
-   ].shuffled()
-
-   private var animationCurves: [Spring.AnimationCurve] = [
-        .EaseIn,
-        .EaseOut,
-        .EaseInOut,
-        .Linear,
-        .Spring,
-        .EaseInSine,
-        .EaseOutSine,
-        .EaseInOutSine,
-        .EaseInQuad,
-        .EaseOutQuad,
-        .EaseInOutQuad,
-        .EaseInCubic,
-        .EaseOutCubic,
-        .EaseInOutCubic,
-        .EaseInQuart,
-        .EaseOutQuart,
-        .EaseInOutQuart,
-        .EaseInQuint,
-        .EaseOutQuint,
-        .EaseInOutQuint,
-        .EaseInExpo,
-        .EaseOutExpo,
-        .EaseInOutExpo,
-        .EaseInCirc,
-        .EaseOutCirc,
-        .EaseInOutCirc,
-        .EaseInBack,
-        .EaseOutBack,
-        .EaseInOutBack
-   ].shuffled()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(myAnimation)
     }
     
     override func viewWillLayoutSubviews() {
@@ -91,11 +33,11 @@ class ViewController: UIViewController {
     @IBAction func switchAnimationButtonPressed(_ sender: SpringButton) {
 
         //       проверяем сколько анимаций мы можем использовать,потому что массивы содержат разное кол-во элементов
-        let repetingCount = min(animations.count,animationCurves.count) - 1
+        let repetingCount = myAnimation.count - 1
         if index < repetingCount {
-        animationView.animation = animations[index].rawValue
-        animationView.curve = animationCurves[index].rawValue
-            sender.setTitle(animations[index+1].rawValue, for: .normal)
+        animationView.animation = myAnimation[index].animation.rawValue
+        animationView.curve = myAnimation[index].animationCurve.rawValue
+            sender.setTitle(myAnimation[index + 1].animation.rawValue, for: .normal)
             index += 1
             animationView.animate()
         } else if index == repetingCount {
@@ -164,7 +106,7 @@ extension ViewController {
         animationView.rotate = 0.3
         
         animationView.animation = "fall"
-        animationView.curve = animationCurves[0].rawValue
+        animationView.curve = myAnimation[index].animationCurve.rawValue
         animationView.animate()
         
         animationTextView.text = "It was reset👩‍💻\n Buy, buy!"
